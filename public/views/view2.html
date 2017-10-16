@@ -1,0 +1,35 @@
+<div class="container" ng-model="inputs">
+	<div class="row top-buffer">
+		<div class="col-sm-9">
+			<div class="form-group">
+	      		<input type="text" Placeholder="Entity Name" ng-model= "inputs.name" class="form-control" id="usr">
+	    	</div>
+		</div>
+		<div class="col-sm-3">
+			<button type="submit" class="btn btn-primary" ng-click="saveEntity(inputs)">SAVE</button>
+		</div>
+			
+	</div>
+
+	<div class="row top-buffer" ng-repeat="item in inputs.entries track by $index">
+		<div class="col-sm-9" style="float: left;">
+			<div class="form" >
+	      		<input type="text" Placeholder="Entity Name" ng-model= "item.value" class="form-control">
+	      		<input type="text" Placeholder="synonyms" ng-model= "item.synonyms" class="form-control">
+	    	</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="form-group">
+	      		<button type="submit" class="btn btn-danger" ng-click="delete($index)">Delete</button>
+	    	</div>
+		</div>
+			
+	</div>
+	<div class="row top-buffer">
+		<div class="col-sm-9">
+			<button type="submit" class="btn btn-primary" ng-click="addfield()">Add</button>
+		</div>
+	</div>
+
+
+</div>

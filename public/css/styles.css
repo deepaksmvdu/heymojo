@@ -1,0 +1,21 @@
+html 					{ overflow-y:scroll; }
+body 					{ padding-top:50px; }
+
+#todo-list { 
+	margin-bottom:30px; 
+	}
+#todo-form { 
+	margin-bottom:50px; 
+}
+.liclass {
+	width: inherit;
+	text-align: 
+	left;border:1px solid #dfe0e2;
+	height: 41px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+.scrollable { 
+	height: 300px;
+	overflow: scroll;
+}

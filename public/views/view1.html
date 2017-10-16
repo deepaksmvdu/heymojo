@@ -1,0 +1,32 @@
+<div class="container">
+	<div class="row top-buffer">
+		<div class="col-sm-9">
+			<i class="fa fa-camera-retro fa-3x"> ENTITY</i>
+		</div>
+		<div class="col-sm-3">
+			<a href="/#/details" class="btn btn-info" role="button">CREATE ENTITY</a>
+			<!-- <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()"></button> -->
+		</div>
+			
+	</div>
+	<div id="todo-form" class="row top-buffer">
+		<div class="col-sm-11 text-center">
+			<form>
+				<div class="form-group">
+					<input type="text" class="form-control input-lg text-center" ng-model="search" placeholder="Search the Entity" ng-model="formData.text">
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="row top-buffer">
+		<div class="scrollable">
+			<li class="liclass" style="list-style-type: none;padding: 10px 10px 10px 10px;"  ng-repeat="model in todos | filter:search" >{{model.name}}
+				<span style="cursor:pointer;" ng-click="delete(model.id,$index)" ><i  class="fa fa-trash-o fa-2x" aria-hidden="true" style="float: right;"></i></span><span style="cursor:pointer;" ng-click="activate(model.id)"><i  class="fa fa-pencil fa-2x" aria-hidden="true" style="float: right;cursor:pointer;margin-right: 12px;"></i></span>
+
+			</li>
+		</div>
+	</div>
+
+</div>
+<!-- 
+<span style="cursor:pointer;" ><i  class="fa fa-trash-o fa-2x" aria-hidden="true" style="float: right;"></i></span><span style="cursor:pointer;"ng-click="delete(model.id)"><i  class="fa fa-pencil fa-2x" aria-hidden="true" style="float: right;cursor:pointer;margin-right: 12px;"></i></span>  -->

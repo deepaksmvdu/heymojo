@@ -1,0 +1,64 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="heyMojoApp">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Dialogflow Entity</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" src="css/styles.css">
+	<style type="text/css">
+		html { overflow-y:scroll; }
+		body { padding-top:0px; }
+
+		#todo-list { 
+			margin-bottom:30px; 
+			}
+		#todo-form { 
+			margin-bottom:50px; 
+		}
+		.liclass {
+			width: inherit;
+			text-align: 
+			left;border:1px solid #dfe0e2;
+			height: 41px;
+			padding-top: 10px;
+			margin-bottom: 10px;
+		}
+		.scrollable { 
+			height: 300px;
+			overflow: scroll;
+		}
+		.top-buffer { margin-top:20px; 
+		}
+		.form-control {width: 48%; display: inline;}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+   
+	<script src="js/services/todos.js"></script> 
+	<script src="js/core.js"></script> 
+
+</head>
+<body ng-controller="mainController">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+		    <div class="navbar-header">
+		      <p class="navbar-text navbar-right"><a href="/#/details"  class="navbar-link">Create Entity</a></p>
+		      <p class="navbar-text navbar-right"><a href="/#/" class="navbar-link">Home</a></p>
+
+		    </div>
+
+		</div>
+	</nav>
+	
+	 <div ng-view></div>
+	
+</body>
+</html>
